@@ -3,8 +3,7 @@
     monaco.languages.register({ id: MINISCRIPT })
 
     monaco.languages.setMonarchTokensProvider(MINISCRIPT, {
-        keywords: ['pk', 'multi', 'time', 'hash', 'thres'],
-        operators: ['and', 'or', 'aor'],
+        keywords: ['pk', 'multi', 'time', 'hash', 'thres','and', 'or', 'aor'],
         tokenizer: {
             root: [
                 [/[a-z_$][\w$]*/, {
@@ -13,11 +12,8 @@
                         '@default': 'identifier'
                     }
                 }],
-                [/[0-9a-fA-F]+/, 'type.identifier'],
                 { include: '@whitespace' },
                 [/[()]/, '@brackets'],
-                [/0[xX][0-9a-fA-F]+/, 'number.hex'],
-                [/\d+/, 'number'],
             ],
             whitespace: [
                 [/[ \t\r\n]+/, 'white'],
@@ -161,7 +157,7 @@
             var offset = model.getOffsetAt(position)-1
             var depth = 0
             var index = 0
-            while(offset) {
+            while(offset>=0) {
                 if(depth < 0) {
                     var word = model.getWordAtPosition(model.getPositionAt(offset))
 
