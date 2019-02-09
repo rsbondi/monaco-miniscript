@@ -45,18 +45,7 @@
         }
     });
 
-    /*
-pk(HEX): Require public key HEX to sign
-multi(NUM,HEX,HEX,...): Require that NUM out of the following HEX public keys sign
-time(NUMBER): Require that a relative time NUMBER has passed since creating the output
-hash(HEX): Require that the SHA256 preimage of HEX is revealed
-and(EXPR,EXPR): Require that both subexpressions are satisfied
-or(EXPR,EXPR): Require that one of the subexpressions is satisfied
-aor(EXPR,EXPR): Same as above, but the first subexpression is more likely than the second
-thres(NUM,EXPR,EXPR,...):Require that NUM out of the following subexpressions are satisfied
-
-    */
-    var sigs = {
+     var sigs = {
         pk: [{
             label: "pk(HEX)",
             parameters: [{
