@@ -23,5 +23,4 @@ It sets up the language definition providing code completion, tokenization and s
 
 
 TODO: 
-* bracket matching
 * npm package
