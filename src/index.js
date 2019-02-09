@@ -176,7 +176,7 @@
                     endColumn: pos.column+1,
                 })
                 if(char == ')') depth++
-                if(char == ',') index++
+                if(char == ',' && depth === 0) index++
                 if(char == '(') depth--
                 offset--
             }
