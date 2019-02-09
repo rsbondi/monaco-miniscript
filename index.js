@@ -170,7 +170,6 @@
                         activeParameter: Math.min(index, sigs[word.word][0].parameters.length - 1),
                         signatures: sigs[word.word]
                     }
-                    console.log(sig)
                     return sig
                 }
                 var pos = model.getPositionAt(offset)

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+	<meta http-equiv="Content-Type" content="text/html;charset=utf-8" >
+	<link rel="stylesheet" data-name="vs/editor/editor.main" href="vs/editor/editor.main.css">
+</head>
+<body>
+
+<h2>Monaco Editor miniscript Sample</h2>
+<div id="container" style="float:left;width:800px;height:600px;border:1px solid grey"></div>
+<div style="float:left; padding-left: 10px">
+	Supported elements:
+	<ul>
+	<li><b>pk(HEX)</b>: Require public key HEX to sign</li>
+	<li><b>multi(NUM,HEX,HEX,...)</b>: Require that NUM out of the following HEX public keys sign</li>
+	<li><b>time(NUMBER)</b>: Require that a relative time NUMBER has passed since creating the output</li>
+	<li><b>hash(HEX)</b>: Require that the SHA256 preimage of HEX is revealed</li>
+	<li><b>and(EXPR,EXPR)</b>: Require that both subexpressions are satisfied</li>
+	<li><b>or(EXPR,EXPR)</b>: Require that one of the subexpressions is satisfied</li>
+	<li><b>aor(EXPR,EXPR)</b>: Same as above, but the first subexpression is more likely than the second</li>
+	<li><b>thres(NUM,EXPR,EXPR,...)</b>: Require that NUM out of the following subexpressions are satisfied</li>
+	</ul>
+</div>
+<script>var require = { paths: { 'vs': 'vs' } };</script>
+<script src="vs/loader.js"></script>
+<script src="vs/editor/editor.main.nls.js"></script>
+<script src="vs/editor/editor.main.js"></script>
+<script src="index.js"></script>
+
+<script>
+	var editor = monaco.editor.create(document.getElementById('container'), {
+		value: '',
+		language: 'miniscript'
+	});
+</script>
+
+</body>
+</html>
