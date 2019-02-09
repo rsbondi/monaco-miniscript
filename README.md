@@ -23,4 +23,5 @@ It sets up the language definition providing code completion, tokenization and s
 
 
 TODO: 
+* add support for user defined keys/hashes for completion
 * npm package
