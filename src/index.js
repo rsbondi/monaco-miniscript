@@ -193,6 +193,7 @@
     monaco.languages.setLanguageConfiguration(MINISCRIPT, {
         autoClosingPairs: [
             { open: '(', close: ')' }
-        ]
+        ],
+        brackets: [['(',')']]
     })
 })()
