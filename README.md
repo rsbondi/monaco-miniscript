@@ -4,6 +4,8 @@ language definition for
 
 It sets up the language definition providing code completion, tokenization and signature help for miniscript
 
+try it [here](https://rsbondi.github.io/monaco-miniscript/)
+
 ### Usage
 
 ```html
