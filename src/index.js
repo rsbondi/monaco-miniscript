@@ -161,12 +161,14 @@
                 if(depth < 0) {
                     var word = model.getWordAtPosition(model.getPositionAt(offset))
 
-                    var sig = {
-                        activeSignature: 0,
-                        activeParameter: Math.min(index, sigs[word.word][0].parameters.length - 1),
-                        signatures: sigs[word.word]
+                    if(word) {
+                        var sig = {
+                            activeSignature: 0,
+                            activeParameter: Math.min(index, sigs[word.word][0].parameters.length - 1),
+                            signatures: sigs[word.word]
+                        }
+                        return sig
                     }
-                    return sig
                 }
                 var pos = model.getPositionAt(offset)
                 var char = model.getValueInRange({
